@@ -1,0 +1,18 @@
+Key Insights
+Insight 1
+The Technology category generated the highest total sales, indicating strong customer demand for technology products.
+
+Insight 2
+Office Supplies had the highest number of orders, showing that customers purchase these items more frequently.
+
+Insight 3
+The Sales distribution is right-skewed, with most orders having low sales and a few orders contributing very high sales.
+
+Insight 4
+The Sales column contains several outliers, representing unusually large transactions.
+
+Insight 5
+Sales and Profit are positively correlated, meaning that higher sales generally result in higher profits.
+
+Conclusion
+The dataset was cleaned by handling missing values, removing duplicate records, correcting data types, and treating outliers. Exploratory Data Analysis revealed patterns in sales, product categories, and profit. The visualizations helped identify distribution, relationships, and trends that can support better business decision-making.
