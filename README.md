@@ -51,15 +51,14 @@ Jupyter Notebook
 ApexPlanet-Data-Analytics/
 │
 ├── data/
-│   └── Superstore_Cleaned.csv
-│
-├── sql/
-│   ├── basic_queries.sql
-|   ├── cte_queries.sql
-│   ├── groupby_having_joining.sql
-│   ├── top10_questions.sql
-│   ├── window_functions.sql
-│   └── view.sql
+│   ├── Superstore_Cleaned.csv
+│   └── sql/
+│       ├── basic_queries.sql
+|       ├── cte_queries.sql
+│       ├── groupby_having_joining.sql
+│       ├── top10_questions.sql
+│       ├── window_functions.sql
+│       └── view.sql
 │
 ├── notebooks/
 │   ├── db.utils.ipynb
