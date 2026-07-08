@@ -1,216 +1,213 @@
 
-# 📊 ApexPlanet Data Analytics - Task 1
-## Data Cleaning and Exploratory Data Analysis (EDA)
+📊 ApexPlanet Data Analytics - Task 2
+SQL for Data Extraction and Business Analysis
 
-This repository contains the implementation of **Task 1** for the ApexPlanet Data Analytics Internship. The project focuses on cleaning a real-world dataset and performing Exploratory Data Analysis (EDA) using Python and Pandas.
+This repository contains the implementation of Task 2 for the ApexPlanet Data Analytics Internship. The project focuses on writing SQL queries to extract, analyze, and summarize business data using the Sample Superstore dataset. It also demonstrates integrating SQL with Python for data analysis.
 
----
-
-## 📌 Objective
+📌 Objective
 
 The objectives of this task are:
 
-- Load a CSV dataset using Pandas
-- Handle missing values
-- Remove duplicate records
-- Fix data types
-- Detect and handle outliers using the IQR method
-- Perform Exploratory Data Analysis (EDA)
-- Visualize data using Matplotlib and Seaborn
-- Document key insights from the analysis
+Learn SQL fundamentals for data analysis
+Perform data extraction using SQL queries
+Use filtering, sorting, and aggregation
+Apply GROUP BY and HAVING clauses
+Perform JOIN operations
+Write Subqueries and Common Table Expressions (CTEs)
+Use Window Functions for advanced analysis
+Create SQL Views for reusable queries
+Integrate Python with SQL using Pandas
+Answer real-world business questions using SQL
+📂 Dataset
 
----
-
-## 📂 Dataset
-
-**Dataset:** Sample - Superstore
+Dataset: Superstore_Cleaned.csv
 
 The dataset contains information about:
 
-- Customer Details
-- Orders
-- Product Categories
-- Sales
-- Profit
-- Discounts
-- Quantity
-- Shipping Details
-
----
-
-## 🛠️ Technologies Used
-
-- Python
-- Jupyter Notebook
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-
----
-
-## 📁 Project Structure
-
-```
+Customer Details
+Orders
+Products
+Categories
+Sales
+Profit
+Discount
+Quantity
+Region
+State
+Ship Mode
+🛠️ Technologies Used
+MySQL
+SQL
+MySQL Workbench
+Python
+Pandas
+SQLAlchemy
+Jupyter Notebook
+📁 Project Structure
 ApexPlanet-Data-Analytics/
 │
 ├── data/
-│   ├── Sample - Superstore.csv
-│   ├── Sample - Superstore_with_missing_and_duplicates.csv
 │   └── Superstore_Cleaned.csv
 │
+├── sql/
+│   ├── basic_queries.sql
+|   ├── cte_queries.sql
+│   ├── groupby_having_joining.sql
+│   ├── top10_questions.sql
+│   ├── window_functions.sql
+│   └── view.sql
+│
 ├── notebooks/
-│   └── Data_Cleaning_and_EDA.ipynb
+│   ├── db.utils.ipynb
+│   └── sql_analysis.sql
 │
-├── dashboards/
-│   ├── histogram.png
-│   ├── boxplot.png
-│   ├── barchart.png
-│   ├── heatmap.png
-│   ├── linechart.png
-│   └── linechart.png
-│
-├── README.md
-└── requirements.txt
-```
+└── README.md
 
----
+📋 SQL Concepts Covered
 
-# 📋 Data Cleaning Process
+The following SQL concepts were practiced:
 
-The following preprocessing steps were performed:
+SELECT
+WHERE
+ORDER BY
+LIMIT
+DISTINCT
+GROUP BY
+HAVING
+Aggregate Functions
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+Subqueries
+Common Table Expressions (CTEs)
+Window Functions
+SQL Views
+📊 Business Questions Solved
 
-- Loaded dataset into Pandas DataFrame
-- Checked dataset information
-- Identified missing values
-- Filled missing values using appropriate methods
-- Removed duplicate rows
-- Converted columns to correct data types
-- Detected and removed outliers using the IQR method
-- Saved the cleaned dataset
+The following business questions were answered:
 
----
+✔ Top 5 Products by Sales
 
-# 📊 Exploratory Data Analysis (EDA)
+✔ Monthly Sales Trend
 
-The following analyses were performed:
+✔ Customer Segmentation by Spend
 
-### ✔ Statistical Summary
+✔ Sales by Region
 
-- Dataset Information
-- Summary Statistics
-- Missing Value Analysis
+✔ Profit by Category
 
-### ✔ Visualizations
+✔ Top 10 Customers
 
-- Histogram
-- Boxplot
-- Bar Chart
-- Count Plot
-- Correlation Heatmap
-- Line Chart
+✔ Best Selling States
 
----
+✔ Average Discount by Category
 
-# 📈 Key Insights
+✔ Top Selling Sub-Categories
 
-### Insight 1
+✔ Most Frequently Purchased Products
 
-The Technology category generated the highest total sales.
+📈 Sample SQL Queries
+Total Sales by Category
+SELECT Category,
+ROUND(SUM(Sales),2) AS TotalSales
+FROM superstore_cleaned
+GROUP BY Category;
+Top 5 Products by Sales
+SELECT `Product Name`,
+ROUND(SUM(Sales),2) AS TotalSales
+FROM superstore_cleaned
+GROUP BY `Product Name`
+ORDER BY TotalSales DESC
+LIMIT 5;
+Common Table Expression (CTE)
+WITH SalesSummary AS
+(
+SELECT Category,
+ROUND(SUM(Sales),2) AS TotalSales
+FROM superstore_cleaned
+GROUP BY Category
+)
 
-### Insight 2
+SELECT *
+FROM SalesSummary;
+🐍 Python + SQL Integration
 
-Office Supplies had the highest number of orders.
+The following tasks were performed using Python:
 
-### Insight 3
+Connected Python with MySQL using SQLAlchemy
+Executed SQL queries using pandas.read_sql()
+Loaded SQL results into Pandas DataFrames
+Displayed query results inside Jupyter Notebook
+Prepared data for further analysis
+📈 Key Insights
+Insight 1
 
-The Sales distribution is right-skewed, indicating that most sales are small while a few orders contribute very high sales.
+Technology generated the highest sales revenue.
 
-### Insight 4
+Insight 2
 
-Several outliers were identified in the Sales column using the IQR method.
+The West region contributed the highest overall sales.
 
-### Insight 5
+Insight 3
 
-Sales and Profit show a positive correlation, indicating that higher sales generally lead to higher profits.
+A small number of products generated a large percentage of total revenue.
 
----
+Insight 4
 
-# ▶️ How to Run
+Higher discounts generally resulted in lower profits.
 
-### 1. Clone the repository
+Insight 5
 
-```bash
+The Consumer segment accounted for the highest sales among all customer segments.
+
+▶️ How to Run
+1. Clone the repository
 git clone https://github.com/your-username/ApexPlanet-Data-Analytics.git
-```
-
-### 2. Navigate to the project
-
-```bash
+2. Navigate to the project
 cd ApexPlanet-Data-Analytics
-```
+3. Import the dataset into MySQL
 
-### 3. Install dependencies
+Use MySQL Workbench to import Superstore_Cleaned.csv.
 
-```bash
+4. Execute SQL Scripts
+
+Open the SQL files inside MySQL Workbench and run the queries.
+
+5. Run Python Integration
 pip install -r requirements.txt
-```
-
-### 4. Launch Jupyter Notebook
-
-```bash
 jupyter notebook
-```
 
-Open the notebook and run all cells.
+Open Python_SQL_Integration.ipynb and execute all cells.
 
----
-
-# 📷 Sample Visualizations
-
-- Sales Distribution Histogram
-- Sales Boxplot
-- Category-wise Sales Bar Chart
-- Correlation Heatmap
-- Sales Trend Line Chart
-
----
-
-# 📚 Learning Outcomes
+📚 Learning Outcomes
 
 Through this project, I learned:
 
-- Data preprocessing using Pandas
-- Handling missing values
-- Removing duplicate records
-- Fixing data types
-- Detecting outliers using the IQR method
-- Performing Exploratory Data Analysis
-- Creating meaningful visualizations
-- Extracting business insights from data
+Writing SQL queries for business analysis
+Data filtering and sorting
+Aggregate Functions
+GROUP BY and HAVING
+SQL JOINs
+Subqueries
+Common Table Expressions (CTEs)
+Window Functions
+Creating SQL Views
+Integrating SQL with Python using SQLAlchemy and Pandas
+🚀 Future Improvements
+Build an interactive SQL dashboard using Streamlit
+Connect SQL queries to Power BI or Tableau
+Automate SQL reporting using Python
+Optimize queries for large datasets
+Explore advanced SQL concepts such as stored procedures and triggers
+👨‍💻 Author
 
----
+Karthick Kumar
 
-# 🚀 Future Improvements
-
-- Build an interactive dashboard using Streamlit
-- Perform advanced statistical analysis
-- Add predictive machine learning models
-- Create interactive visualizations using Plotly
-
----
-
-# 👨‍💻 Author
-
-**Karthick Kumar**
-
-MCA Student  
+MCA Student
 KIT – Kalaignar Karunanidhi Institute of Technology
 
 GitHub: https://github.com/KARTHI250904
 
----
+⭐ Acknowledgement
 
-## ⭐ Acknowledgement
-
-This project was completed as part of the **ApexPlanet Data Analytics Internship** to gain hands-on experience in Data Cleaning and Exploratory Data Analysis using Python.
+This project was completed as part of the ApexPlanet Data Analytics Internship to gain hands-on experience in SQL for Data Extraction, Business Analysis, and Python-SQL Integration.
