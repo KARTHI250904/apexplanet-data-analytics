@@ -1,5 +1,5 @@
 
-#📊 ApexPlanet Data Analytics - Task 2
+# 📊 ApexPlanet Data Analytics - Task 2
 ## SQL for Data Extraction and Business Analysis
 
 This repository contains the implementation of Task 2 for the ApexPlanet Data Analytics Internship. The project focuses on writing SQL queries to extract, analyze, and summarize business data using the Sample Superstore dataset. It also demonstrates integrating SQL with Python for data analysis.
