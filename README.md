@@ -50,20 +50,17 @@ Jupyter Notebook
 
 ApexPlanet-Data-Analytics/
 │
-├── data/
+├── Task2/
 │   ├── Superstore_Cleaned.csv
-│   └── sql/
-│       ├── basic_queries.sql
-|       ├── cte_queries.sql
-│       ├── groupby_having_joining.sql
-│       ├── top10_questions.sql
-│       ├── window_functions.sql
-│       └── view.sql
-│
-├── notebooks/
+│   ├── basic_queries.sql
+|   ├── cte_queries.sql
+│   ├── groupby_having_joining.sql
+│   ├── top10_questions.sql
+│   ├── window_functions.sql
 │   ├── db.utils.ipynb
-│   └── sql_analysis.sql
-│
+│   ├── sql_analysis.sql
+│   └── view.sql
+|
 └── README.md
 
 ## 📋 SQL Concepts Covered
