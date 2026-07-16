@@ -1,226 +1,196 @@
+# 📊 ApexPlanet Data Analytics Internship – Task 3
 
-# 📊 ApexPlanet Data Analytics - Task 2
-## SQL for Data Extraction and Business Analysis
+## Data Visualization & Dashboarding
 
-This repository contains the implementation of Task 2 for the ApexPlanet Data Analytics Internship. The project focuses on writing SQL queries to extract, analyze, and summarize business data using the Sample Superstore dataset. It also demonstrates integrating SQL with Python for data analysis.
+This repository contains the implementation of **Task 3** of the **ApexPlanet Software Pvt. Ltd. Data Analytics Internship**. The objective of this task is to create meaningful visualizations using Python and build an interactive dashboard using Power BI for business insights.
 
+---
 
 ## 📌 Objective
 
 The objectives of this task are:
 
-Learn SQL fundamentals for data analysis
-Perform data extraction using SQL queries
-Use filtering, sorting, and aggregation
-Apply GROUP BY and HAVING clauses
-Perform JOIN operations
-Write Subqueries and Common Table Expressions (CTEs)
-Use Window Functions for advanced analysis
-Create SQL Views for reusable queries
-Integrate Python with SQL using Pandas
-Answer real-world business questions using SQL
+- Load and analyze a real-world dataset.
+- Create visualizations using Python libraries.
+- Perform exploratory data visualization.
+- Build an interactive Power BI dashboard.
+- Generate business insights through charts and KPIs.
+
+---
+
+## 🛠️ Tools & Technologies
+
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
+- Plotly
+- Power BI Desktop
+- Power Query
+- DAX
+
+---
 
 ## 📂 Dataset
 
-Dataset: Superstore_Cleaned.csv
+**Dataset:** Sample Superstore
 
-The dataset contains information about:
+The dataset contains sales transactions including:
 
-Customer Details
-Orders
-Products
-Categories
-Sales
-Profit
-Discount
-Quantity
-Region
-State
-Ship Mode
-🛠️ Technologies Used
-MySQL
-SQL
-MySQL Workbench
-Python
-Pandas
-SQLAlchemy
-Jupyter Notebook
+- Order Date
+- Category
+- Sub-Category
+- Region
+- Sales
+- Profit
+- Quantity
+- Discount
+
+---
+
+## 📈 Python Visualizations
+
+The following visualizations were created using Python:
+
+- 📉 Line Chart – Sales Trend Over Time
+- 📊 Bar Chart – Sales by Category
+- 🥧 Pie Chart – Category-wise Sales Distribution
+- 📋 Histogram – Sales Distribution
+- 🔵 Scatter Plot – Sales vs Profit
+- 📦 Box Plot – Outlier Detection
+- 🔥 Heatmap – Correlation Analysis
+- 📊 Pair Plot – Relationship Between Numerical Features
+- ⚡ Interactive Bar Chart – Plotly Visualization
+
+---
+
+## 📊 Power BI Dashboard
+
+The dashboard includes:
+
+- KPI Cards
+  - Total Sales
+  - Total Profit
+  - Total Orders
+  - Total Quantity
+
+- Interactive Visualizations
+  - Sales Trend
+  - Category-wise Sales
+  - Regional Sales
+  - Top Products
+  - Sales Map
+
+- Slicers
+  - Region
+  - Category
+  - Segment
+  - Order Date
+
+- DAX Measures
+  - Total Sales
+  - Total Profit
+  - Average Sales
+  - Total Orders
+  - Profit Margin
+
+---
 
 ## 📁 Project Structure
 
-ApexPlanet-Data-Analytics/
+```
+Task-3-Data-Visualization/
 │
-├── Task2/
-│   ├── Superstore_Cleaned.csv
-│   ├── basic_queries.sql
-|   ├── cte_queries.sql
-│   ├── groupby_having_joining.sql
-│   ├── top10_questions.sql
-│   ├── window_functions.sql
-│   ├── db.utils.ipynb
-│   ├── sql_analysis.sql
-│   └── view.sql
-|
-└── README.md
+├── data/
+│   └── Sample - Superstore.csv
+│
+├── python_visualization.py
+│
+├── dashboard.pbix
+│
+├── images/
+│   ├── line_chart.png
+│   ├── bar_chart.png
+│   ├── pie_chart.png
+│   ├── histogram.png
+│   ├── scatter_plot.png
+│   ├── box_plot.png
+│   ├── heatmap.png
+│   ├── pairplot.png
+│   └── dashboard.png
+│
+├── README.md
+│
+└── requirements.txt
+```
 
-## 📋 SQL Concepts Covered
-
-The following SQL concepts were practiced:
-
-SELECT
-WHERE
-ORDER BY
-LIMIT
-DISTINCT
-GROUP BY
-HAVING
-Aggregate Functions
-INNER JOIN
-LEFT JOIN
-RIGHT JOIN
-Subqueries
-Common Table Expressions (CTEs)
-Window Functions
-SQL Views
-
-## 📊 Business Questions Solved
-
-The following business questions were answered:
-
-✔ Top 5 Products by Sales
-
-✔ Monthly Sales Trend
-
-✔ Customer Segmentation by Spend
-
-✔ Sales by Region
-
-✔ Profit by Category
-
-✔ Top 10 Customers
-
-✔ Best Selling States
-
-✔ Average Discount by Category
-
-✔ Top Selling Sub-Categories
-
-✔ Most Frequently Purchased Products
-
-## 📈 Sample SQL Queries
-
--- Total Sales by Category
-SELECT Category,
-ROUND(SUM(Sales),2) AS TotalSales
-FROM superstore_cleaned
-GROUP BY Category;
-
--- Top 5 Products by Sales
-SELECT `Product Name`,
-ROUND(SUM(Sales),2) AS TotalSales
-FROM superstore_cleaned
-GROUP BY `Product Name`
-ORDER BY TotalSales DESC
-LIMIT 5;
-
--- Common Table Expression (CTE)
-WITH SalesSummary AS
-(
-SELECT Category,
-ROUND(SUM(Sales),2) AS TotalSales
-FROM superstore_cleaned
-GROUP BY Category
-)
-
-SELECT *
-FROM SalesSummary;
-
-## 🐍 Python + SQL Integration
-
-The following tasks were performed using Python:
-
-Connected Python with MySQL using SQLAlchemy
-Executed SQL queries using pandas.read_sql()
-Loaded SQL results into Pandas DataFrames
-Displayed query results inside Jupyter Notebook
-Prepared data for further analysis
-
-## 📈 Key Insights
-# Insight 1
-
-Technology generated the highest sales revenue.
-
-# Insight 2
-
-The West region contributed the highest overall sales.
-
-# Insight 3
-
-A small number of products generated a large percentage of total revenue.
-
-# Insight 4
-
-Higher discounts generally resulted in lower profits.
-
-# Insight 5
-
-The Consumer segment accounted for the highest sales among all customer segments.
+---
 
 ## ▶️ How to Run
 
-### 1. Clone the repository
+### Clone the Repository
 
-git clone https://github.com/your-username/ApexPlanet-Data-Analytics.git
+```bash
+git clone https://github.com/your-username/Task-3-Data-Visualization.git
+```
 
-### 2. Navigate to the project
+### Install Dependencies
 
-cd ApexPlanet-Data-Analytics
+```bash
+pip install pandas matplotlib seaborn plotly kaleido
+```
 
-### 3. Import the dataset into MySQL
+### Run the Python Script
 
-Use MySQL Workbench to import Superstore_Cleaned.csv.
+```bash
+python python_visualization.py
+```
 
-### 4. Execute SQL Scripts
+The generated charts will be saved in the **images/** folder.
 
-Open the SQL files inside MySQL Workbench and run the queries.
+---
 
-### 5. Run Python Integration
-pip install  pandas sqlalchemy mysql-connector-python python-dotenv
-jupyter notebook
+## 📷 Sample Dashboard
 
-Open Python_SQL_Integration.ipynb and execute all cells.
+Add a screenshot of your Power BI dashboard here.
 
-## 📚 Learning Outcomes
+```
+images/dashboard.png
+```
 
-Through this project, I learned:
+---
 
-Writing SQL queries for business analysis
-Data filtering and sorting
-Aggregate Functions
-GROUP BY and HAVING
-SQL JOINs
-Subqueries
-Common Table Expressions (CTEs)
-Window Functions
-Creating SQL Views
-Integrating SQL with Python using SQLAlchemy and Pandas
+## 🎯 Key Learnings
 
-## 🚀 Future Improvements
-Build an interactive SQL dashboard using Streamlit
-Connect SQL queries to Power BI or Tableau
-Automate SQL reporting using Python
-Optimize queries for large datasets
-Explore advanced SQL concepts such as stored procedures and triggers
+- Data Visualization using Python
+- Business Intelligence with Power BI
+- Creating Interactive Dashboards
+- Data Storytelling
+- KPI Development using DAX
+- Correlation Analysis
+- Interactive Visualizations with Plotly
 
-## 👨‍💻 Author
+---
 
-**Karthick Kumar K**
+## 📚 Skills Gained
 
-MCA Student
-KIT – Kalaignar Karunanidhi Institute of Technology
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
+- Plotly
+- Power BI
+- Power Query
+- DAX
+- Dashboard Design
+- Data Analytics
 
-GitHub: https://github.com/KARTHI250904
+---
 
-## ⭐ Acknowledgement
+## 🙌 Acknowledgement
 
-This project was completed as part of the ApexPlanet Data Analytics Internship to gain hands-on experience in SQL for Data Extraction, Business Analysis, and Python-SQL Integration.
+This project was completed as part of the **Data Analytics Internship** at **ApexPlanet Software Pvt. Ltd.** It helped strengthen practical skills in data visualization, dashboard development, and business intelligence.
+
+---
+
+⭐ If you found this project helpful, consider giving it a star!
