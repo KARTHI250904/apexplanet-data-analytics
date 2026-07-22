@@ -1,293 +1,228 @@
-# 📊 ApexPlanet Data Analytics Internship – Task 4
+# 📊 ApexPlanet Data Analytics Internship
 
-## Advanced Analytics and Statistical Modeling using Python
+## Retail Sales Data Analysis using Python, SQL and Power BI
 
-This repository contains the implementation of **Task 4** of the **ApexPlanet Data Analytics Internship**. The project focuses on applying statistical analysis, time series analysis, customer segmentation, and predictive analytics to extract meaningful business insights from the Superstore dataset.
-
----
-
-## 📌 Objective
-
-The primary objectives of this task are:
-
-- Perform descriptive statistical analysis
-- Conduct hypothesis testing
-- Calculate confidence intervals
-- Analyze sales trends using time series analysis
-- Perform customer segmentation using K-Means Clustering
-- Visualize customer groups using Principal Component Analysis (PCA)
-- Build a predictive model using Linear Regression
-- Evaluate model performance using regression metrics
-- Generate business insights and recommendations
+This repository contains all the tasks completed during the **ApexPlanet Software Pvt. Ltd. Data Analytics Internship**. The internship focused on building practical skills in **Python, SQL, Data Visualization, Power BI, and Automation** by analyzing a real-world retail sales dataset.
 
 ---
 
-## 📂 Project Structure
+## 📌 Internship Objectives
 
-```
-Task4-Advanced-Analytics/
-│
-├── data/
-│   └── Sample - Superstore.csv
-│
-├── notebooks/
-│   └── Task4_Advanced_Analytics.ipynb
-│
-├── images/
-│   ├── Monthly_Sales.png
-│   ├── Elbow_Method.png
-│   ├── Customer_Clusters.png
-│   └── Feature_Importance.png
-│
-├── requirements.txt
-│
-└── README.md
-```
+- Learn data preprocessing and cleaning techniques.
+- Perform Exploratory Data Analysis (EDA).
+- Analyze business data using SQL.
+- Build interactive dashboards using Power BI.
+- Automate data processing using Python.
+- Generate meaningful business insights and recommendations.
 
 ---
 
-## 📊 Dataset
-
-**Dataset Used**
-
-Sample Superstore Dataset
-
-The dataset contains information about:
-
-- Orders
-- Customers
-- Products
-- Categories
-- Sales
-- Profit
-- Quantity
-- Discount
-- Region
-- Shipping Details
-
----
-
-# 🛠 Technologies Used
+## 🛠️ Technologies Used
 
 - Python
-- Jupyter Notebook
 - Pandas
 - NumPy
 - Matplotlib
-- SciPy
-- Scikit-learn
+- Seaborn
+- SQL (MySQL)
+- Power BI
+- Jupyter Notebook
+- Visual Studio Code
+- OpenPyXL
 
 ---
 
-# 📚 Libraries Used
+## 📂 Repository Structure
 
-```python
-pandas
-numpy
-matplotlib
-scipy
-scikit-learn
+```
+apexplanet-data-analytics/
+│
+├── Task1/
+├── Task2/
+├── Task3/
+├── Task4/
+├── Task5/
+│
+├── SampleSuperstore.csv
+├── requirements.txt
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-# 📈 Project Workflow
+# 📖 Task Overview
 
-```
-Load Dataset
-        │
-        ▼
-Data Inspection
-        │
-        ▼
-Data Cleaning
-        │
-        ▼
-Descriptive Statistics
-        │
-        ▼
-Hypothesis Testing
-        │
-        ▼
-Confidence Interval
-        │
-        ▼
-Time Series Analysis
-        │
-        ▼
-Feature Scaling
-        │
-        ▼
-K-Means Clustering
-        │
-        ▼
-PCA Visualization
-        │
-        ▼
-Linear Regression Model
-        │
-        ▼
-Model Evaluation
-        │
-        ▼
-Business Insights
-```
+## ✅ Task 1 – Data Cleaning & Exploratory Data Analysis (EDA)
+
+### Objective
+
+Perform data preprocessing and understand the dataset using Exploratory Data Analysis.
+
+### Activities Performed
+
+- Imported the dataset using Pandas
+- Checked dataset information
+- Removed duplicate records
+- Handled missing values
+- Corrected data types
+- Generated descriptive statistics
+- Created visualizations using Matplotlib and Seaborn
+
+### Tools Used
+
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
 
 ---
 
-# 📌 Task Breakdown
+## ✅ Task 2 – SQL for Data Analytics
 
-## 1️⃣ Data Inspection
+### Objective
 
-- Load dataset
-- Check shape
-- View sample records
-- Examine data types
-- Detect missing values
-- Identify duplicate records
+Analyze retail sales data using SQL queries.
+
+### Activities Performed
+
+- SELECT statements
+- Filtering data using WHERE
+- GROUP BY analysis
+- ORDER BY sorting
+- Aggregate functions
+- Joins
+- Subqueries
+- Common Table Expressions (CTEs)
+- Views
+
+### Tools Used
+
+- MySQL
+- SQL
+- Jupyter Notebook
 
 ---
 
-## 2️⃣ Descriptive Statistics
+## ✅ Task 3 – Power BI Dashboard
 
-Performed statistical analysis on:
+### Objective
 
+Develop an interactive business intelligence dashboard.
+
+### Dashboard Includes
+
+- Sales Analysis
+- Profit Analysis
+- Regional Performance
+- Category-wise Sales
+- Segment Analysis
+- KPIs
+- Interactive Filters
+
+### Tools Used
+
+- Power BI Desktop
+
+---
+
+## ✅ Task 4 – Business Insights & Analysis
+
+### Objective
+
+Interpret analytical results and provide business recommendations.
+
+### Key Activities
+
+- Sales trend analysis
+- Profit analysis
+- Customer segmentation
+- Regional comparison
+- Product category analysis
+- Business recommendations
+
+---
+
+## ✅ Task 5 – Automation Pipeline
+
+### Objective
+
+Automate the retail sales data analysis process using Python.
+
+### Features
+
+- Dataset loading
+- Data cleaning
+- Duplicate removal
+- Missing value handling
+- KPI calculation
+- Excel report generation
+- Clean dataset export
+
+### Output Files
+
+- Cleaned Dataset
+- KPI Report (.xlsx)
+- Executive Report (.pdf/.docx)
+
+---
+
+# 📊 Dataset
+
+**Dataset Name**
+
+Sample Superstore Dataset
+
+The dataset contains retail business information including:
+
+- Orders
 - Sales
 - Profit
-- Quantity
-- Discount
-
-Calculated:
-
-- Mean
-- Median
-- Mode
-- Standard Deviation
-- Variance
-- Skewness
+- Customers
+- Regions
+- Categories
+- Products
+- Discounts
+- Shipping Information
 
 ---
 
-## 3️⃣ Hypothesis Testing
+# 📈 Key Business Insights
 
-Performed statistical tests including:
-
-### Independent t-Test
-
-Compared sales between different product categories.
-
-### Chi-Square Test
-
-Analyzed the relationship between:
-
-- Region
-- Ship Mode
-
-### Confidence Interval
-
-Calculated the 95% confidence interval for average sales.
+- West Region generated the highest sales.
+- Technology category achieved the highest profit.
+- Furniture category recorded comparatively lower profit.
+- California contributed the highest overall sales.
+- High discounts negatively affected profitability.
 
 ---
 
-## 4️⃣ Time Series Analysis
+# 💡 Business Recommendations
 
-Analyzed sales trends over time by:
-
-- Converting Order Date to datetime
-- Aggregating monthly sales
-- Visualizing sales trends
-- Applying Moving Average
-
----
-
-## 5️⃣ Customer Segmentation
-
-Performed clustering using:
-
-- StandardScaler
-- K-Means Clustering
-
-Selected optimal clusters using:
-
-- Elbow Method
-
-Visualized customer segments using:
-
-- Principal Component Analysis (PCA)
+- Reduce excessive discounts on low-profit products.
+- Focus marketing efforts on high-performing products.
+- Improve pricing strategies for Furniture products.
+- Monitor regional performance regularly.
+- Automate data processing for faster business reporting.
 
 ---
 
-## 6️⃣ Predictive Analytics
+# ⚙️ Installation
 
-Built a Linear Regression model to predict:
-
-**Target Variable**
-
-Profit
-
-**Input Features**
-
-- Sales
-- Quantity
-- Discount
-
----
-
-## 7️⃣ Model Evaluation
-
-Evaluated model performance using:
-
-- MAE (Mean Absolute Error)
-- MSE (Mean Squared Error)
-- RMSE (Root Mean Squared Error)
-- R² Score
-
----
-
-## 📊 Key Visualizations
-
-The project includes:
-
-- Distribution Plots
-- Monthly Sales Trend
-- Moving Average Trend
-- Elbow Method Graph
-- PCA Cluster Visualization
-- Feature Importance Analysis
-
----
-
-## 📈 Business Insights
-
-Some key observations include:
-
-- Technology products generate higher average sales.
-- Higher discounts tend to reduce profitability.
-- Sales show seasonal fluctuations over time.
-- Customer segmentation identifies groups with different purchasing behaviors.
-- Sales positively influence profit, while discounts have a negative impact.
-
----
-
-# 🚀 How to Run the Project
-
-## Clone Repository
+Clone the repository
 
 ```bash
-git clone https://github.com/your-username/Task4-Advanced-Analytics.git
+git clone https://github.com/yourusername/apexplanet-data-analytics.git
 ```
 
----
-
-## Navigate to Project
+Move into the project directory
 
 ```bash
-cd Task4-Advanced-Analytics
+cd apexplanet-data-analytics
 ```
 
----
-
-## Install Dependencies
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -295,90 +230,72 @@ pip install -r requirements.txt
 
 ---
 
-## Launch Jupyter Notebook
+# ▶️ Running the Project
+
+Run Jupyter Notebook
 
 ```bash
 jupyter notebook
 ```
 
-Open:
+Run the automation script
 
-```
-Task4_Advanced_Analytics.ipynb
+```bash
+python Task5/automation.py
 ```
 
 ---
 
-# 📋 Requirements
+# 📁 Outputs
 
-```
-Python >= 3.10
-
-pandas
-numpy
-matplotlib
-scipy
-scikit-learn
-jupyter
-```
+- Cleaned Dataset
+- SQL Analysis
+- Power BI Dashboard
+- Business Insights
+- KPI Report
+- Executive Report
 
 ---
 
 # 🎯 Learning Outcomes
 
-After completing this project, you will understand:
+Through this internship, I gained hands-on experience in:
 
-- Descriptive Statistics
-- Inferential Statistics
-- Hypothesis Testing
-- Confidence Intervals
-- Time Series Analysis
-- Data Standardization
-- K-Means Clustering
-- Principal Component Analysis
-- Linear Regression
-- Model Evaluation
-- Business Analytics
+- Data Cleaning
+- Exploratory Data Analysis
+- SQL Query Writing
+- Data Visualization
+- Dashboard Development
+- Business Intelligence
+- Automation using Python
+- Report Generation
 
 ---
 
-# 📌 Future Enhancements
+# 🚀 Future Improvements
 
-Potential improvements include:
-
-- Random Forest Regression
-- Decision Tree Regression
-- Gradient Boosting Regression
-- Forecasting using ARIMA
-- Interactive Dashboard using Power BI
-- Deployment using Streamlit
-- Automated Model Comparison
+- Real-time dashboard integration
+- Automated database connectivity
+- Scheduled report generation
+- Cloud deployment
+- Advanced predictive analytics using Machine Learning
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 **Karthick Kumar**
 
-MCA Student | Data Analytics Enthusiast | Python Developer
+MCA Student  
+KIT – Kalaignar Karunanidhi Institute of Technology  
+Coimbatore, Tamil Nadu
 
-### Skills
+GitHub: https://github.com/KARTHI250904/
 
-- Python
-- SQL
-- Power BI
-- Machine Learning
-- Data Analytics
-- Statistical Analysis
+LinkedIn: https://linkedin.com/in/karthi250904/
 
 ---
 
-## ⭐ Acknowledgements
+## ⭐ Acknowledgement
 
-This project was completed as part of the **ApexPlanet Data Analytics Internship Program**, demonstrating the application of advanced analytics and machine learning techniques to solve real-world business problems.
-
----
-
-## 📄 License
-
-This project is intended for educational and internship purposes.
+This project was completed as part of the **Data Analytics Internship** at **ApexPlanet Software Pvt. Ltd.** The internship provided practical exposure to Python, SQL, Power BI, data visualization, automation, and business analytics through real-world retail sales data.
